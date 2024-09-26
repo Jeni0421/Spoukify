@@ -1,0 +1,185 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    background-color: #121212; /* Dark background for a sleek look */
+    color: #ffffff; /* White text for contrast */
+    line-height: 1.6; /* Improves readability */
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(135deg, #1db954, #1ed760); /* Spotify green gradient */
+    color: #ffffff; /* White text for contrast */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #282828; /* Darker background for nav */
+    padding: 15px 0;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Increased gap for better spacing */
+}
+
+nav ul li a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 12px 25px; /* More padding for buttons */
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1db954; /* Spotify green for hover effect */
+    transform: scale(1.05);
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section styles */
+section {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Translucent dark background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* List styles */
+ul.song-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.song-list li {
+    background: rgba(255, 255, 255, 0.1); /* Dark translucent for song list items */
+    border-radius: 10px;
+    margin: 15px 0; /* More margin for spacing */
+    padding: 15px 20px; /* More padding for items */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.song-list li:hover {
+    background: rgba(255, 255, 255, 0.2); /* Lighter translucent background for hover effect */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Song information styles */
+.song-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 1;
+    margin-right: 15px; /* Adjusted margin */
+}
+
+.song-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px; /* Space between title and artist */
+}
+
+.song-artist {
+    font-size: 0.9rem;
+    color: #b3b3b3; /* Lighter gray for artist name */
+}
+
+/* Audio player styling */
+audio {
+    width: 300px;
+    margin-left: 20px;
+    filter: brightness(1.1); /* Slight brightness to stand out */
+}
+
+/* Button styles */
+button {
+    background: #1db954; /* Spotify green for buttons */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #1ed760; /* Lighter green for hover effect */
+    transform: translateY(-2px);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #282828; /* Dark background for footer */
+    color: #ffffff; /* White text */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px; /* Reduced gap for smaller screens */
+    }
+
+    audio {
+        width: 100%; /* Make audio player take full width on small screens */
+    }
+
+    button {
+        width: 100%; /* Full-width buttons on small screens */
+        padding: 12px;
+    }
+
+    /* Stack the song list items on smaller screens */
+    ul.song-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
